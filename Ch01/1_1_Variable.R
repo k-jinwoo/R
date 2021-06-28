@@ -32,3 +32,30 @@ str <- c('A','B','C','D','E')
 f <- factor(str)
 f
 
+#교재 p40 실습 - 변수 사용 예
+var1 <- 0 # 변수 var1에 값 0으로 초기화(var1 = 0 사용가능)
+var1      # 변수 var1의 값을 확인
+var1 <- 1
+var1
+var2 <- 2
+var2
+var3 <- 3
+var3
+
+#교재 p40 실습 - 변수.멤버 형식의 변수 선언 예
+goods.code <- 'a001'    # 상품코드
+goods.name <- '냉장고'  # 상품명
+goods.price <- 850000   # 가격
+goods.des <- '최고사양, 동급 최고 품질' # 상품설명
+
+#교재 p41 실습 - 스칼라 변수 사용 예
+age <- 35
+name <- "홍길동"
+age
+name
+
+#교재 p41 실습 - 벡터 변수 사용 예
+age <- 35
+names <- c("홍길동","이순신","유관순")
+age
+names

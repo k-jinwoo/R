@@ -51,3 +51,47 @@ summary(iris) # 데이터프레임 요약통계 확인
 iris[,-5]
 aggregate(iris[,-5], by=list(iris$Species), mean)
 aggregate(iris[,-5], by=list(iris$Species), max)
+
+#교재 p72 실습 - 벡터를 이용한 데이터프레임 객체 생성하기
+no <- c(1,2,3)
+name <- c('hong','lee','kim')
+pay <- c(150,250,300)
+vemp <- data.frame(No = no, Name = name, Pay = pay)
+vemp
+
+#교재 p72 실습 - matrix를 이용한 데이터프레임 객체 생성하기
+m <- matrix(
+  c(1,'hong',150,
+    2,'lee',250,
+    3,'kim',300), 3, by = T)
+memp <- data.frame(m)
+memp
+
+#교재 p72 실습 - 텍스트 파일을 이용한 데이터프레임 객체 생성하기
+getwd()
+txtemp <- read.table('emp.txt',header = 1, sep = "")
+txtemp
+
+#교재 p73 실습 - CSV 파일을 이용한 데이터프레임 객체 생성하기
+csvtemp <- read.csv('emp.csv',header = T)
+csvtemp
+help(read.csv)
+name <- c('사번','이름','급여')
+reda.csv('emp2.csv',header = F, colnames = name)
+
+#교재 p73 실습 - 데이터프레임 만들기
+df <- data.frame(x = c(1:5), y = seq(2,10,2), z = c('a','b','c','d','e'))
+df
+
+#교재 p73 실습 - 데이터프레임의 칼럼명 참조하기
+df$x
+
+#교재 p74 실습 - 데이터프레임의 자료구조, 열수, 행수, 칼럼명 보기
+str(df)
+ncol(df)
+nrow(df)
+names(df)
+df[c(2:3),1]
+
+#교재 p74 실습 - 요약통계량 보기
+summary(df)
